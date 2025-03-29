@@ -38,13 +38,13 @@ pip install -r requirements.txt 2>/dev/null || echo "No requirements.txt found. 
 # Open a new terminal with required dimensions and run the game
 echo "Starting game..."
 if command_exists gnome-terminal; then
-    gnome-terminal --geometry=80x80 -- bash -c "source venv/bin/activate; python3 main.py; exec bash"
+    gnome-terminal --geometry=80x40 -- bash -c "source venv/bin/activate; python3 main.py; exec bash"
 elif command_exists xfce4-terminal; then
-    xfce4-terminal --geometry=80x80 --command "bash -c 'source venv/bin/activate; python3 main.py; exec bash'"
+    xfce4-terminal --geometry=80x40 --command "bash -c 'source venv/bin/activate; python3 main.py; exec bash'"
 elif command_exists konsole; then
-    konsole --geometry 80x80 --noclose -e "bash -c 'source venv/bin/activate; python3 main.py'"
+    konsole --geometry 80x40 --noclose -e "bash -c 'source venv/bin/activate; python3 main.py'"
 elif command_exists xterm; then
-    xterm -geometry 80x80 -e "bash -c 'source venv/bin/activate; python3 main.py; exec bash'"
+    xterm -geometry 80x40 -e "bash -c 'source venv/bin/activate; python3 main.py; exec bash'"
 else
     echo "No supported terminal found! Running in the current terminal..."
     python3 main.py

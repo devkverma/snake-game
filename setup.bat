@@ -32,6 +32,6 @@ if %errorlevel% neq 0 (
 
 :: Open a new terminal with correct size and run the game
 echo Starting game...
-start cmd /k "mode con: cols=100 lines=100 && call venv\Scripts\activate && python main.py"
+start cmd /k "mode con: cols=80 lines=40 && call venv\Scripts\activate && python main.py"
 
 exit /b

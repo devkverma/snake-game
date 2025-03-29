@@ -45,4 +45,4 @@ except subprocess.CalledProcessError:
 
 # Run the game
 print("Starting game...")
-subprocess.run(["start", "cmd", "/k", f"mode con: cols=80 lines=80 && {venv_python} main.py"], shell=True)
+subprocess.run(["start", "cmd", "/k", f"mode con: cols=80 lines=40 && {venv_python} main.py"], shell=True)
